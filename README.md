@@ -17,14 +17,12 @@
 以下的方法，可以找到Port號被哪一個執行緒給佔去，然後該怎麼把他釋放掉.
 
 **Mac** <br>
-lsof -i tcp:port_number  //檢查目前port號被哪一個執行緒佔據 <br>
-kill -9 PID              //把該執行緒給刪除, PID為執行緒的ID. <br>
+lsof -i tcp:port_number     //檢查目前port號被哪一個執行緒佔據 <br>
+kill -9 PID                 //把該執行緒給刪除, PID為執行緒的ID. <br>
 > 範例: <br>
 > lsof -i tcp:3000 <br>
-<br>
 > COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME<br>
 > node    66856       ricky   22u  IPv6 0xdc31e3995b3a330b      0t0  TCP *:exlm-agent (LISTEN)<br>
-<br>
 > kill -9 66856<br>
 
 ---
