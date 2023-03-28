@@ -26,6 +26,7 @@
 **lsof -i tcp:3000** <br>
 > COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME<br>
 > node    66856       ricky   22u  IPv6 0xdc31e3995b3a330b      0t0  TCP *:exlm-agent (LISTEN)<br>
+
 **kill -9 66856**<br>
 
 ---
